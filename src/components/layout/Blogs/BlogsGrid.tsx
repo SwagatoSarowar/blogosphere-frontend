@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Container } from "../Container/Container";
 import BlogCard from "./BlogCard";
 
@@ -650,9 +649,7 @@ export default function BlogsGrid() {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {data.map((blog, index) => (
-            <Link to="/">
-              <BlogCard key={index} data={blog} />
-            </Link>
+            <BlogCard key={index} data={blog} />
           ))}
         </div>
       </Container>
