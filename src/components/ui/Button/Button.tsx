@@ -23,7 +23,7 @@ export const Button = function ({
     <button
       disabled={isLoading}
       {...props}
-      className={`${styleClass} disabled:bg-opacity-50 disabled:cursor-not-allowed rounded-lg inline-flex items-center justify-center py-4 px-10 text-center font-medium text-white hover:bg-opacity-90 duration-200 lg:px-8 xl:px-10 ${className}`}
+      className={`${styleClass} disabled:bg-opacity-50 disabled:cursor-not-allowed rounded-lg inline-flex items-center justify-center py-3 px-6 text-center font-medium text-white hover:bg-opacity-90 duration-200 ${className}`}
     >
       {isLoading ? <Loader size="sm" color={color} /> : children}
     </button>

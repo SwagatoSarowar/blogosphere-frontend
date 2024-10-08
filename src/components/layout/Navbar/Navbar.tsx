@@ -1,3 +1,4 @@
+import { FaBars } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { Container } from "../Container/Container";
@@ -22,47 +23,17 @@ export default function Navbar(props: {
               }}
               className="z-99999 block rounded-sm p-1.5 shadow-sm md:hidden"
             >
-              <span className="relative block h-5.5 w-5.5 cursor-pointer">
-                <span className="du-block absolute right-0 h-full w-full">
-                  <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-[0] duration-200 ease-in-out ${
-                      !props.sidebarOpen && "!w-full delay-300"
-                    }`}
-                  ></span>
-                  <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-150 duration-200 ease-in-out ${
-                      !props.sidebarOpen && "delay-400 !w-full"
-                    }`}
-                  ></span>
-                  <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-white delay-200 duration-200 ease-in-out ${
-                      !props.sidebarOpen && "!w-full delay-500"
-                    }`}
-                  ></span>
-                </span>
-                <span className="absolute right-0 h-full w-full rotate-45">
-                  <span
-                    className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-white delay-300 duration-200 ease-in-out ${
-                      !props.sidebarOpen && "!h-0 !delay-[0]"
-                    }`}
-                  ></span>
-                  <span
-                    className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-white duration-200 ease-in-out ${
-                      !props.sidebarOpen && "!h-0 !delay-200"
-                    }`}
-                  ></span>
-                </span>
-              </span>
+              <FaBars color="white" size={22} />
             </button>
           </div>
 
-          <div className="md:block hidden">
+          <div className="">
             <Link className="block flex-shrink-0" to="/">
               <img className="w-40" src={logo} alt="Logo" />
             </Link>
           </div>
 
-          <div className="flex items-center gap-3 2xsm:gap-7">
+          <div className="hidden items-center gap-3 2xsm:gap-7 md:flex">
             <ul className="flex items-center gap-2 2xsm:gap-4">
               <DarkModeSwitcher />
             </ul>
