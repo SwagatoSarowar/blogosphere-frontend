@@ -26,7 +26,7 @@ export default function Profile() {
             <div className="rounded-full p-3 bg-secondary/20 backdrop-blur-md w-fit -translate-y-1/3">
               <img
                 className="w-[100px] md:w-[200px] aspect-square object-cover rounded-full"
-                src={placeholder}
+                src={user?.profileImage || placeholder}
                 alt="user"
               />
             </div>
